@@ -1,5 +1,5 @@
 {
-  "name": "vue3-bootstrap5",
+  "name": "Cafe-Chill",
   "version": "0.1.0",
   "private": true,
   "scripts": {
@@ -8,7 +8,17 @@
     "lint": "vue-cli-service lint"
   },
   "dependencies": {
+    "@fortawesome/fontawesome-svg-core": "^6.4.2",
+    "@fortawesome/free-brands-svg-icons": "^6.4.2",
+    "@fortawesome/free-regular-svg-icons": "^6.4.2",
+    "@fortawesome/free-solid-svg-icons": "^6.4.2",
+    "@fortawesome/vue-fontawesome": "^3.0.3",
+    "@popperjs/core": "^2.11.8",
+    "bootstrap": "^5.3.2",
+    "bootstrap-vue": "^2.23.1",
     "core-js": "^3.8.3",
+    "sass": "^1.69.4",
+    "sass-loader": "^13.3.2",
     "vue": "^3.2.13"
   },
   "devDependencies": {
@@ -32,7 +42,9 @@
     "parserOptions": {
       "parser": "@babel/eslint-parser"
     },
-    "rules": {}
+    "rules": {
+      "vue/multi-word-component-names": "off"
+    }
   },
   "browserslist": [
     "> 1%",

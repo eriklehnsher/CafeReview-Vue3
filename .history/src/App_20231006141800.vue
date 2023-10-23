@@ -1,0 +1,41 @@
+<template>
+  <Header class="header-app" />
+  <HomePage class="homepage-app" />
+</template>
+
+<script>
+import Header from "./components/Header.vue";
+import HomePage from "./components/HomePage.vue";
+
+export default {
+  name: "App",
+  components: {
+    HomePage,
+    Header,
+  },
+};
+</script>
+
+<style>
+@import url("https://fonts.googleapis.com/css2?family=ABeeZee&display=swap");
+
+body {
+  margin: 0px;
+}
+#app {
+  background: #d9d9d9;
+  height: 1000vh;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  font-family: "ABeeZee", sans-serif;
+}
+.header-app {
+  position: sticky;
+
+}
+.homepage-app {
+ background-color: #fff;
+  padding: 0px 100px  10%;
+}
+</style>
