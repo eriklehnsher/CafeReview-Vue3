@@ -1,6 +1,6 @@
 <template>
   <div class="header">
-    <div class="container">
+    <div class="">
       <nav class="navbar navbar-expand-lg">
         <div class="container-fluid">
           <a class="navbar-brand" href="#">Navbar</a>
@@ -180,9 +180,9 @@ export default {};
   height: 82px;
   background-color: #fff;
 }
-.container {
+/* .container {
   padding: 10px 10%;
-}
+} */
 .Author {
   border-radius: 50px;
   border: 1px solid #dbcfcf;

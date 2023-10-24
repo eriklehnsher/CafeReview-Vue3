@@ -1,0 +1,308 @@
+* {
+  margin: 0%;
+  padding: 0%;
+}
+//? HomePage-main
+@import url("https://fonts.googleapis.com/css2?family=Ingrid+Darling&display=swap");
+
+.homepage {
+  // padding: 50px 5%;
+  display: flex;
+  flex-direction: column;
+  padding-top: 50px ;
+  
+}
+
+.homepage__banner {
+  // padding: 50px 5%;
+  margin: 0;
+  height: auto;
+}
+
+.promo-1:hover {
+  cursor: pointer;
+}
+.promo-text {
+  width: 80%;
+  height: 100%;
+  color: black;
+  font-size: 14px;
+  font-family: inherit;
+  font-weight: 300;
+}
+.carousel {
+  border-radius: 10px;
+  box-shadow: 0px 4px 4px 0px #000;
+}
+.banner-flex {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  align-items: flex-start;
+}
+.banner-bg {
+  border-radius: 10px;
+  box-shadow: 0px 4px 4px 0px #000;
+}
+.carousel-inner {
+  border-radius: 10px;
+}
+
+.homepage__searchBox {
+  margin-top: 50px;
+}
+.homepage__searchBox h2 {
+  font-family: "Ingrid Darling", cursive;
+  text-align: center;
+  color: #000;
+  font-size: 40px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.homepage__topCafe {
+  margin-top: 100px;
+  background-color: inherit;
+  // padding: 50px 5%;
+}
+.homepage__LocateStore {
+  margin-top: 100px;
+  background-color: #fff;
+  padding: 50px 5%;
+}
+.homepage__Promos {
+  background-color: inherit;
+  // padding: 50px 5%;
+}
+
+//? LocateStore
+@import url("https://fonts.googleapis.com/css2?family=Ingrid+Darling&display=swap");
+
+.locate {
+  // padding: 50px 10%;
+  margin: 0;
+  height: auto;
+  margin-top: 10px;
+  background-color: #ffffff;
+}
+.locate--title {
+  color: #0c3f6f;
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.3);
+  font-family: inherit;
+  font-size: 30px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  text-align: center;
+  margin-bottom: 50px;
+}
+.homepage__location {
+
+  justify-content: space-between;
+}
+.homepage__location__hanoi {
+  border-radius: 10px;
+
+  background-image: url("../images/HaNoi_v2.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  padding: 20px;
+  width: 300px;
+  height: 300px;
+  flex-shrink: 0;
+}
+.homepage__location__hanoi:hover {
+  cursor: pointer;
+  border-radius: 15px;
+  background: linear-gradient(27deg, #000 5.52%, rgba(0, 0, 0, 0) 58.05%),
+    url("../images/HaNoi_v2.jpg"), lightgray 50% / cover no-repeat;
+  background-size: 100%;
+  background-repeat: no-repeat;
+}
+
+.homepage__location__danang {
+  border-radius: 10px;
+
+  background-image: url("../images/DaNang_v2.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  padding: 20px;
+  width: 200px;
+  height: 300px;
+  flex-shrink: 0;
+}
+.homepage__location__danang:hover {
+  cursor: pointer;
+  border-radius: 15px;
+  background: linear-gradient(27deg, #000 5.52%, rgba(0, 0, 0, 0) 58.05%),
+    url("../images/DaNang_v2.jpg"), lightgray 50% / cover no-repeat;
+  background-size: 100%;
+  background-repeat: no-repeat;
+}
+.homepage__location__dalat {
+  border-radius: 10px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  padding: 20px;
+  width: 200px;
+  height: 300px;
+  flex-shrink: 0;
+  background-image: url("../images/DaLat_v2.jpg");
+}
+.homepage__location__dalat:hover {
+  cursor: pointer;
+  border-radius: 15px;
+  background: linear-gradient(27deg, #000 5.52%, rgba(0, 0, 0, 0) 58.05%),
+    url("../images/DaLat_v2.jpg"), lightgray 50% / cover no-repeat;
+  background-size: 100%;
+  background-repeat: no-repeat;
+}
+.homepage__location__hcm {
+  border-radius: 10px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  padding: 20px;
+  width: 200px;
+  height: 300px;
+  flex-shrink: 0;
+  background-image: url("../images/HoChiMinh_v2.jpg");
+}
+.homepage__location__hcm:hover {
+  cursor: pointer;
+  border-radius: 15px;
+  background: linear-gradient(27deg, #000 5.52%, rgba(0, 0, 0, 0) 58.05%),
+    url("../images/HoChiMinh_v2.jpg"), lightgray 50% / cover no-repeat;
+  background-size: 100%;
+  background-repeat: no-repeat;
+}
+
+.homepage__location h2 {
+  margin-left: 15px;
+  color: #fff;
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.5);
+  font-family: inherit;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+.homepage__location p {
+  color: #fff;
+  font-family: inherit;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+//? ListStores
+.top-stores {
+    background-color: #fff;
+    height: auto;
+  }
+  .header-title {
+    font-size: 30px;
+    color: #0c3f6f;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.3);
+    font-family: inherit;
+    font-size: 30px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    text-align: center;
+    margin-bottom: 30px;
+  }
+  .list--stores__store {
+    width: 300px;
+    height: 400px;
+  }
+  .list--stores__store {
+    border-radius: 8px;
+    border: 1px solid #d9d9d9;
+    background: #fff;
+    padding: 10px;
+    align-items: center;
+  }
+  .list--stores__store h2 {
+    margin-top: 20px;
+    color: #6de5e9;
+  
+    font-family: inherit;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+  }
+  .list--stores__store--img img {
+    width: 100%;
+    height: 257px;
+    flex-shrink: 0;
+    border-radius: 8px;
+  }
+  
+  .list--stores p {
+    color: #000;
+    font-family: inherit;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+  }
+  .fa-star {
+    background-color: yellow !important;
+  }
+  .list--stores__store--location p {
+    margin-bottom: 0;
+    margin-left: 5px;
+  }
+  
+  .list--stores__store--price p {
+    margin-top: 13px;
+    margin-bottom: 0;
+  }
+  .list--stores__store--price .vote {
+    margin-top: 13px;
+  }
+  //? HomePage-Promos
+  
+  .promos__title {
+    color: #0c3f6f;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.3);
+    font-family: inherit;
+    font-size: 30px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    text-align: center;
+  }
+  .promos__items {
+    display: flex;
+    flex-direction: column-reverse;
+   
+    background-size: 100%;
+    background-repeat: no-repeat;
+    padding: 20px;
+    width: 355px;
+    height: 274px;
+    flex-shrink: 0;
+    border-radius: 38px;
+    background: linear-gradient(29deg, #000 12.02%, rgba(0, 0, 0, 0) 58.13%),
+      url("../images/promo1.jpg"), lightgray 50% / cover no-repeat;
+  }
+  .promos__items p {
+    color: #fff;
+    font-family: inherit;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+  }
+  .promos__items h2 {
+    color: #f4b30c;
+    text-shadow: 0px 4px 4px rgba(244, 179, 12, 0.4);
+    font-family: inherit;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+  }

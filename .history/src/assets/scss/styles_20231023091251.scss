@@ -1,0 +1,75 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.container {
+    padding: 0px 10%;
+}
+body {
+    color: black;
+    height: 100%;
+    font-size: 14px;
+    line-height: 24px;
+    font-weight: 400;
+
+    h1 {
+        font-weight: 700;
+        font-size: 20px;
+        line-height: 28px;
+    }
+}
+
+
+
+//? set margin-size
+$sizes: 4px, 8px, 10px, 12px, 14px, 16px, 18px, 20px, 22px, 24px, 40px, 60px, 80px, 200px ;
+
+@each $size in $sizes {
+    .p-#{$size} {
+        padding: $size !important;
+    }
+
+    .py-#{$size} {
+        padding-top: $size !important;
+        padding-bottom: $size !important;
+    }
+
+    .pr-#{$size} {
+        padding-right: $size !important;
+    }
+
+    .px-#{$size} {
+        padding-left: $size !important;
+        padding-right: $size !important;
+    }
+
+    .pt-#{$size} {
+        padding-top: $size !important;
+    }
+
+    .mb-#{$size} {
+        margin-bottom: $size !important;
+    }
+
+    .mt-#{$size} {
+        margin-top: $size !important;
+    }
+
+    .mr-#{$size} {
+        margin-right: $size !important;
+    }
+
+    .ml-#{$size} {
+        margin-left: $size !important;
+    }
+
+}
+
+//? flex 
+@each $size in $sizes {
+    .d-flex-#{$size} {
+        display: flex;
+        gap: #{$size};
+        align-items: center;
+    }
+}

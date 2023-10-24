@@ -1,8 +1,8 @@
 <template>
-  <div class="homepage">
+  <div class="homepage container">
     <!-- banner section -->
     <div class="homepage__banner">
-      <div class="banner-flex d-flex">
+      <div class="banner-flex  ">
         <div class="">
           <!-- <img
             src="../assets/images/images-slider1.png"
@@ -42,14 +42,14 @@
             </div>
           </div>
         </div>
-        <div class="promo">
-          <div class="promo-1">
+        <div class="promo mt-4">
+          <div class="promo-1 d-flex flex-column">
             <img class="promo-img" src="../assets/images/promo1.png" alt="" />
             <p class="promo-text">
               Top quán cafe được đánh giá cao nhất trong tuần này?
             </p>
           </div>
-          <div class="promo-1 mt-4">
+          <div class="promo-1 d-flex flex-column ">
             <img class="promo-img" src="../assets/images/promo2.png" alt="" />
             <p class="promo-text">
               Top 14 Quán ăn sinh viên ngon rẻ, nổi tiếng nhất ở Hà Nội
@@ -60,7 +60,7 @@
     </div>
 
     <!-- SearchBox Section -->
-    <div class="homepage__searchBox">
+    <div class="d-flex flex-column align-items-center homepage__searchBox">
       <h2>Đi đâu chill?</h2>
       <SearchBox />
     </div>
