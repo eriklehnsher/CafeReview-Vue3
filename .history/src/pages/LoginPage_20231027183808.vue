@@ -93,7 +93,6 @@ export default {
             .get(`/user/email/${this.formLogin.email}`)
             .then(response => {
               console.log(response.data._id)
-              window.location.replace("/");
             })
             .catch(error => {
               console.log('Error', error)

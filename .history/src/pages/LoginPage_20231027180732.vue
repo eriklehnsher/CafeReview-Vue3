@@ -63,7 +63,6 @@ import { AUTH_REQUEST } from '../stores/auth'
 import axiosIns from '@/libs/axiosConfig'
 
 export default {
-  props: ['isLogin'],
   data () {
     return {
       formLogin: {
@@ -93,7 +92,6 @@ export default {
             .get(`/user/email/${this.formLogin.email}`)
             .then(response => {
               console.log(response.data._id)
-              window.location.replace("/");
             })
             .catch(error => {
               console.log('Error', error)

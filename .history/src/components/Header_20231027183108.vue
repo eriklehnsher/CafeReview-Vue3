@@ -127,10 +127,8 @@
           </div>
         </div>
         <div v-else class="header__infoAuth">
-          <router-link to="/userInfo" class=""> Thông tin cá nhân </router-link>
-          <a @click="logout()" class="dropdown-item" href="">Đăng Xuất</a>
           <div class="dropdown-menu dropdown-menu-end">
-            <div class="dropdown-item">
+            <div class="">
               <router-link to="/userInfo" class="">
                 Thông tin cá nhân
               </router-link>
@@ -140,7 +138,7 @@
             </div>
 
             <hr class="dropdown-divider" />
-            <a @click="logout()" class="dropdown-item" href="">Đăng Xuất</a>
+            <a @click="Logout()" class="dropdown-item" href="">Đăng Xuất</a>
           </div>
         </div>
       </div>
@@ -149,7 +147,7 @@
 </template>
 
 <script>
-import { AUTH_LOGOUT } from '../stores/auth'
+import { AUTH_LOGOUT} from "../stores/auth"
 export default {
   data () {
     return {
@@ -158,20 +156,17 @@ export default {
     }
   },
   methods: {
-    loggedIn () {
-      this.isLogin = true
-    },
-    logout () {
-      this.isLogin = false
-      this.$store
-        .dispatch(AUTH_LOGOUT)
-        .then(() => {
-          this.$router.push('/')
-        })
-        .catch(err => {
-          console.log(err)
-        })
-    }
+logout() {
+			this.isLogin = false;
+			this.$store
+				.dispatch(AUTH_LOGOUT)
+				.then(() => {
+					this.$router.push("/");
+				})
+				.catch((err) => {
+					console.log(err);
+				});
+		},
   },
   created () {
     let token = localStorage.getItem('token')
