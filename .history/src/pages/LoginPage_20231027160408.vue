@@ -83,7 +83,8 @@ export default {
       this.$store
         .dispatch(AUTH_REQUEST, { data: data })
         .then(() => {
-         
+          this.$emit("login", this.isLogin);
+          this.$bvModal.hide("modal-login");
 
           axiosIns
             .get(`/user/email/${this.formLogin.email}`)

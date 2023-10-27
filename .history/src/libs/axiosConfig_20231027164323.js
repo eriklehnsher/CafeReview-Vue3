@@ -16,7 +16,7 @@ axiosIns.interceptors.request.use(
     if (token != "") {
       config.headers["Authorization"] = "Bearer " + token;
     }
- 
+    config.params = { base_url: process.env.VUE_APP_BACKEND_URL };
     return config;
   },
   (error) => {

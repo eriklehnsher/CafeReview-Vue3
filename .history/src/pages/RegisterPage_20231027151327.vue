@@ -74,10 +74,8 @@
   </div>
 </template>
 <script>
-
-import axiosConfig from "@/libs/axiosConfig";
-
-import {AUTH_REQUEST} from "../stores/auth";
+// import axiosConfig from "../libs/axiosConfig.js";
+// import {AUTH_REQUEST} from "../stores/auth";
 
 export default {
   data () {
@@ -89,45 +87,17 @@ export default {
       }
     }
   },
-  // methods: {
-  //   async submitRegister () {
-  //     const data = {
-  //       username: this.formRegister.username,
-  //       email: this.formRegister.email,
-  //       password: this.formRegister.password
-  //     }
-  //     localStorage.setItem('user_data', JSON.stringify(data))
+  methods: {
+    async submitRegister () {
+      const data = {
+        username: this.formRegister.username,
+        email: this.formRegister.email,
+        password: this.formRegister.password
+      }
+      localStorage.setItem('user_data', JSON.stringify(data))
 
-  //     console.log('data-Register',data)
-  //   }
-  // }
-   methods: {
-    async submitRegister() {
-     await axiosConfig
-				.post("/user/register", this.formRegister)
-				.then((response) => {
-					let dataLogin = {
-						email: this.formRegister.email,
-						password: this.formRegister.password,
-					};
-					console.log("dataLogin", dataLogin);
-					this.$store
-						.dispatch(AUTH_REQUEST, { data: dataLogin })
-						.then(() => {
-							this.$emit("login", this.isLogin);
-							localStorage.setItem("user_id", response.data._id);
-							localStorage.setItem("username", response.data.username);
-							localStorage.setItem("user_email", this.formRegister.email);
-							window.location.replace("/");
-						})
-						.catch((err) => {
-							console.log(err);
-						});
-				})
-				.catch((err) => {
-					console.log("err:::::::", err);
-				});
-    },
-  },
+      console.log('data-Register',data)
+    }
+  }
 }
 </script>

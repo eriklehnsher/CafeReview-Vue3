@@ -1,9 +1,9 @@
 import axios from "axios";
-import { store } from "../stores/store";
+import { store } from "../stores";
 import { AUTH_LOGOUT } from "@/stores/auth";
 
 const axiosIns = axios.create({
-  baseURL: "http://127.0.0.1:8000",
+  baseURL: process.env.VUE_APP_BACKEND_URL,
   timeout: 50000,
 });
 
@@ -16,7 +16,7 @@ axiosIns.interceptors.request.use(
     if (token != "") {
       config.headers["Authorization"] = "Bearer " + token;
     }
- 
+    config.params = { base_url: process.env.VUE_APP_BACKEND_URL };
     return config;
   },
   (error) => {

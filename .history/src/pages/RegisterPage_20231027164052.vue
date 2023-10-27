@@ -74,8 +74,8 @@
   </div>
 </template>
 <script>
-
-import axiosConfig from "@/libs/axiosConfig";
+import axiosConfig from "../../libs/axiosConfig";
+// import axiosIns from "@/libs/axiosConfig";
 
 import {AUTH_REQUEST} from "../stores/auth";
 

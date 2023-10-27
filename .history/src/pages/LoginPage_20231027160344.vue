@@ -61,7 +61,7 @@
 <script>
 
 import { AUTH_REQUEST } from "../stores/auth"
-import axiosIns from "@/libs/axiosConfig";
+import axiosIns from "@libs/axiosConfig";
 
 export default {
    data() {
@@ -82,8 +82,9 @@ export default {
       };
       this.$store
         .dispatch(AUTH_REQUEST, { data: data })
-        .then(() => {
-         
+        .then((res) => {
+          this.$emit("login", this.isLogin);
+          this.$bvModal.hide("modal-login");
 
           axiosIns
             .get(`/user/email/${this.formLogin.email}`)

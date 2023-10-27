@@ -1,9 +1,8 @@
 import { AUTH_REQUEST, AUTH_LOGOUT } from "./auth";
 import axiosConfig from "@/libs/axiosConfig";
 import jwtDecode from "jwt-decode";
+
 import { createStore } from "vuex";
-
-
 
 const store = createStore({
   state: {

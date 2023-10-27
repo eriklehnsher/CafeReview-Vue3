@@ -74,8 +74,8 @@
   </div>
 </template>
 <script>
-
-import axiosConfig from "@/libs/axiosConfig";
+import axiosConfig from "../../libs/axiosConfig";
+// import axiosIns from "@/libs/axiosConfig";
 
 import {AUTH_REQUEST} from "../stores/auth";
 
@@ -103,6 +103,13 @@ export default {
   // }
    methods: {
     async submitRegister() {
+      const data = {
+        username: this.formRegister.name,
+        email: this.formRegister.email,
+        password: this.formRegister.password,
+   
+
+      };
      await axiosConfig
 				.post("/user/register", this.formRegister)
 				.then((response) => {

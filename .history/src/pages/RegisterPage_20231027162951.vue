@@ -74,9 +74,7 @@
   </div>
 </template>
 <script>
-
-import axiosConfig from "@/libs/axiosConfig";
-
+import axiosIns from "../libs/axiosConfig.js";
 import {AUTH_REQUEST} from "../stores/auth";
 
 export default {
@@ -103,30 +101,35 @@ export default {
   // }
    methods: {
     async submitRegister() {
-     await axiosConfig
-				.post("/user/register", this.formRegister)
-				.then((response) => {
-					let dataLogin = {
-						email: this.formRegister.email,
-						password: this.formRegister.password,
-					};
-					console.log("dataLogin", dataLogin);
-					this.$store
-						.dispatch(AUTH_REQUEST, { data: dataLogin })
-						.then(() => {
-							this.$emit("login", this.isLogin);
-							localStorage.setItem("user_id", response.data._id);
-							localStorage.setItem("username", response.data.username);
-							localStorage.setItem("user_email", this.formRegister.email);
-							window.location.replace("/");
-						})
-						.catch((err) => {
-							console.log(err);
-						});
-				})
-				.catch((err) => {
-					console.log("err:::::::", err);
-				});
+      const data = {
+        username: this.formRegister.name,
+        email: this.formRegister.email,
+        password: this.formRegister.password,
+        role: "",
+
+      };
+      await axiosIns
+        .post("/user/register", data)
+        .then(() => {
+          let dataLogin = {
+            email: this.formRegister.email,
+            password: this.formRegister.password,
+
+          };
+          this.$store
+            .dispatch(AUTH_REQUEST, { data: dataLogin })
+            .then((res) => {
+              console.log(res);
+              this.$emit("login", this.isLogin);
+            })
+            .catch((err) => {
+              console.log(err);
+            });
+  
+        })
+        .catch((err) => {
+          console.log("err:::::::", err);
+        });
     },
   },
 }
