@@ -1,4 +1,5 @@
 <template>
+div.app
   <Header />
   <router-view class="body__view"> </router-view>
   <!-- <router-view v-slot="{ Component }" class="body__view">
@@ -29,7 +30,11 @@ export default {
 <style>
 @import url('https://fonts.googleapis.com/css2?family=ABeeZee&display=swap');
 
-
+.app {
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  min-height: 100vh;
+}
 #app {
   /* height: auto; */
   -webkit-font-smoothing: antialiased;
